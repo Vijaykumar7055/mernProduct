@@ -8,9 +8,9 @@ const authenticateToken = (req, res, next) => {
         return res.status(401).json({ message: "Authentication token required" });
     }
 
-    jwt.verify(token, "bookstore123", (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET || "bookstore123", (err, user) => {
         if (err) {
-            
+            console.error("Token verification failed:", err.message);
             return res.status(403).json({ message: "Invalid or expired token, please sign in again" });
         }
 
