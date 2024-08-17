@@ -5,7 +5,7 @@ const {authenticateToken} = require("./userAuth");
 // put book to cart
 
 //add to cart
-router.post("/add-to-cart", authenticateToken , async(req, res)=>{
+router.put("/add-to-cart", authenticateToken , async(req, res)=>{
     try {
         const  {bookid , id} = req.headers;
         const userData = await User.findById(id)
