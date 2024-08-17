@@ -16,7 +16,7 @@ router.put("/add-book-to-favourate", authenticateToken , async (req, res)=>{
         return res.status(200).json({message: "Bookadded to favourated"})
         
     } catch (error) {
-        res.status(500).json({ message: "internal server error"});
+        res.status(500).json({ message: "internal server error" , error});
     }
 })
 

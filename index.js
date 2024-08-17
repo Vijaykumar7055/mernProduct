@@ -19,6 +19,6 @@ app.use("/api/v1",favourite);
 app.use("/api/v1",Cart);
 app.use("/api/v1",Order);
 
-app.listen(process.env.PORT,()=>{
+app.listen(1010,()=>{
     console.log("server started in ")
 })

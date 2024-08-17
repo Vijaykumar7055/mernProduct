@@ -53,12 +53,11 @@ const bookSchema = new mongoose.Schema({
     },
     desc: {
         type: String,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,  // Co\rrcted 'require' to 'required'
     },
     language: {
         type: String,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,  // Corrected 'rquire' to 'required'
     }
 }, { timestamps: true });
-
 module.exports = mongoose.model("books", bookSchema);  // Capitalized model name for consistency
