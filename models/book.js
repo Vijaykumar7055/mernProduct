@@ -1,63 +1,42 @@
-// const mongoose = require("mongoose");
-
-// const book = new mongoose.Schema({
-//      url:{
-//         type: String,
-//         require: true,
-//      },
-//      title:{
-//         type: String,
-//         require: true,
-//      },
-//      author:{
-//         type: String,
-//         require: true,
-//      },
-//      price:{
-//         type: Number,
-//         require: true,
-//      },
-//      desc:{
-//         type: String,
-//         require: true,
-//      },
-//      language:{
-//         type: String,
-//         require: true,
-//      },
-// },
-// {timestamps:true}
-// );
-// module.exports = mongoose.model("book" , book)
-
-
-
 const mongoose = require("mongoose");
 
 const bookSchema = new mongoose.Schema({
     url: {
         type: String,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,
     },
     title: {
         type: String,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,
     },
     author: {
         type: String,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,
     },
     price: {
         type: Number,
-        required: true,  // Corrected 'require' to 'required'
+        required: true,
     },
     desc: {
         type: String,
-        required: true,  // Co\rrcted 'require' to 'required'
+        required: true,
     },
-    language: {
-        type: String,
-        required: true,  // Corrected 'rquire' to 'required'
-    }
+    rem: {
+        type: String,  // Assuming RAM is represented as a string (e.g., "4GB")
+        required: true,
+    },
+    rom: {
+        type: String,  // Assuming ROM is represented as a string (e.g., "64GB")
+        required: true,
+    },
+    battery: {
+        type: String,  // Assuming battery is represented as a string (e.g., "4000mAh")
+        required: true,
+    },
+    camera: {
+        type: String,  // Assuming camera is represented as a string (e.g., "12MP")
+        required: true,
+    },
 }, { timestamps: true });
-module.exports = mongoose.model("books", bookSchema);  // Capitalized model name for consistency
+
+module.exports = mongoose.model("Book", bookSchema);  // Consistent model name capitalization
