@@ -20,7 +20,9 @@ return res.status(400).json({message:"you are not having perform admin work" })
             author:req.body.author,
             price:req.body.price,
             desc:req.body.desc,
-            language:req.body.language,
+            rem:req.body.rem,
+            rom:req.body.rom,
+            battery:req.body.battery,
         });
         await book.save();
 
@@ -42,6 +44,9 @@ try {
             price:req.body.price,
             url:req.body.url,
             url:req.body.url,
+            rem:req.body.rem,
+            rom:req.body.rom,
+            battery:req.body.battery,
     });
 
     return res.status(200).json({
